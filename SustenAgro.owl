@@ -1,0 +1,401 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://biomac.icmc.usp.br/sustenagro/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://biomac.icmc.usp.br/sustenagro/">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Declaration>
+        <Class IRI="EconomicIndicator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EnviromentalIndicator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Farm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Index"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Indicator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="IndicatorRecord"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Interval"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Method"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MicroRegion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Reference"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Resource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SocialIndicator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasIndex"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasIndicator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasInterval"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasReference"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasResource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="instanceOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isResult"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="useIndicator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="author"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="holder"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="id_region"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="latitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="longitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="lower_bound"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="methodology"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="publicarion_date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="recommendation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="sustenable_relevance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="title"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="upper_bound"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="value"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="EconomicIndicator"/>
+        <Class IRI="Indicator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EnviromentalIndicator"/>
+        <Class IRI="Indicator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Farm"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="isIn"/>
+            <Class IRI="MicroRegion"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Farm"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="hasIndex"/>
+            <Class IRI="Index"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Farm"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="hasIndicator"/>
+            <Class IRI="Indicator"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Index"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="isResult"/>
+            <Class IRI="Method"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Indicator"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasInterval"/>
+            <Class IRI="Interval"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Indicator"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="hasReference"/>
+            <Class IRI="Reference"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="IndicatorRecord"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="instanceOf"/>
+            <Class IRI="Farm"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="IndicatorRecord"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="instanceOf"/>
+            <Class IRI="Indicator"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Method"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="useIndicator"/>
+            <Class IRI="Indicator"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MicroRegion"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasResource"/>
+            <Class IRI="Resource"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SocialIndicator"/>
+        <Class IRI="Indicator"/>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasInterval"/>
+        <Class IRI="Indicator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasReference"/>
+        <Class IRI="Indicator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasResource"/>
+        <Class IRI="MicroRegion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isIn"/>
+        <Class IRI="Farm"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasInterval"/>
+        <Class IRI="Interval"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasReference"/>
+        <Class IRI="Reference"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasResource"/>
+        <Class IRI="Resource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isIn"/>
+        <Class IRI="MicroRegion"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="sustenable_relevance"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="author"/>
+        <Class IRI="Reference"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="description"/>
+        <Class IRI="Indicator"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="description"/>
+        <Class IRI="Interval"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="holder"/>
+        <Class IRI="Farm"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="id_region"/>
+        <Class IRI="MicroRegion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="latitude"/>
+        <Class IRI="Farm"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="longitude"/>
+        <Class IRI="Farm"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="lower_bound"/>
+        <Class IRI="Interval"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="methodology"/>
+        <Class IRI="Indicator"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="name"/>
+        <Class IRI="Farm"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="name"/>
+        <Class IRI="Method"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="publicarion_date"/>
+        <Class IRI="Reference"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="recommendation"/>
+        <Class IRI="IndicatorRecord"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="sustenable_relevance"/>
+        <Class IRI="Indicator"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="title"/>
+        <Class IRI="Indicator"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="title"/>
+        <Class IRI="Reference"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="upper_bound"/>
+        <Class IRI="Interval"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="value"/>
+        <Class IRI="IndicatorRecord"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="author"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="description"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="holder"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="id_region"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="latitude"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="longitude"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="lower_bound"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="methodology"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="publicarion_date"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="recommendation"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="sustenable_relevance"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="title"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="upper_bound"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="value"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DisjointDataProperties>
+        <DataProperty IRI="description"/>
+        <DataProperty IRI="methodology"/>
+        <DataProperty IRI="sustenable_relevance"/>
+        <DataProperty IRI="title"/>
+    </DisjointDataProperties>
+    <DisjointDataProperties>
+        <DataProperty IRI="description"/>
+        <DataProperty IRI="methodology"/>
+        <DataProperty IRI="title"/>
+    </DisjointDataProperties>
+    <DisjointDataProperties>
+        <DataProperty IRI="recommendation"/>
+        <DataProperty IRI="value"/>
+    </DisjointDataProperties>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
