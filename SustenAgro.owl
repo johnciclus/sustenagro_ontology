@@ -1,13 +1,11 @@
 <?xml version="1.0"?>
 
-
 <!DOCTYPE Ontology [
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
 ]>
-
 
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://biomac.icmc.usp.br/sustenagro/"
@@ -16,10 +14,11 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      ontologyIRI="http://biomac.icmc.usp.br/sustenagro/">
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
         <Class IRI="EconomicIndicator"/>
     </Declaration>
@@ -42,13 +41,16 @@
         <Class IRI="Interval"/>
     </Declaration>
     <Declaration>
+        <Class IRI="IntervalType"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Method"/>
     </Declaration>
     <Declaration>
-        <Class IRI="MicroRegion"/>
+        <Class IRI="Reference"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Reference"/>
+        <Class IRI="Region"/>
     </Declaration>
     <Declaration>
         <Class IRI="Resource"/>
@@ -123,10 +125,40 @@
         <DataProperty IRI="title"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="type"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="upper_bound"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="value"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Boolean"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Date"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="DateTime"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Double"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Float"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Integer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Literal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="String"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Uri"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="EconomicIndicator"/>
@@ -135,13 +167,6 @@
     <SubClassOf>
         <Class IRI="EnviromentalIndicator"/>
         <Class IRI="Indicator"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Farm"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="isIn"/>
-            <Class IRI="MicroRegion"/>
-        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Farm"/>
@@ -200,16 +225,56 @@
         </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="MicroRegion"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="hasResource"/>
-            <Class IRI="Resource"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="SocialIndicator"/>
         <Class IRI="Indicator"/>
     </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="IntervalType"/>
+        <NamedIndividual IRI="Boolean"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="IntervalType"/>
+        <NamedIndividual IRI="Date"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="IntervalType"/>
+        <NamedIndividual IRI="DateTime"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="IntervalType"/>
+        <NamedIndividual IRI="Double"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="IntervalType"/>
+        <NamedIndividual IRI="Float"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="IntervalType"/>
+        <NamedIndividual IRI="Integer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="IntervalType"/>
+        <NamedIndividual IRI="Literal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="IntervalType"/>
+        <NamedIndividual IRI="String"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="IntervalType"/>
+        <NamedIndividual IRI="Uri"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="Boolean"/>
+        <NamedIndividual IRI="Date"/>
+        <NamedIndividual IRI="DateTime"/>
+        <NamedIndividual IRI="Double"/>
+        <NamedIndividual IRI="Float"/>
+        <NamedIndividual IRI="Integer"/>
+        <NamedIndividual IRI="Literal"/>
+        <NamedIndividual IRI="String"/>
+        <NamedIndividual IRI="Uri"/>
+    </DifferentIndividuals>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasInterval"/>
         <Class IRI="Indicator"/>
@@ -217,10 +282,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasReference"/>
         <Class IRI="Indicator"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasResource"/>
-        <Class IRI="MicroRegion"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="isIn"/>
@@ -237,10 +298,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasResource"/>
         <Class IRI="Resource"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="isIn"/>
-        <Class IRI="MicroRegion"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="sustenable_relevance"/>
@@ -261,10 +318,6 @@
     <DataPropertyDomain>
         <DataProperty IRI="holder"/>
         <Class IRI="Farm"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="id_region"/>
-        <Class IRI="MicroRegion"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="latitude"/>
@@ -309,6 +362,10 @@
     <DataPropertyDomain>
         <DataProperty IRI="title"/>
         <Class IRI="Reference"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="type"/>
+        <Class IRI="IntervalType"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="upper_bound"/>
