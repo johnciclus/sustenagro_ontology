@@ -22,6 +22,12 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
+        <Class IRI="Assessment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CustomIndicator"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="EconomicIndicator"/>
     </Declaration>
     <Declaration>
@@ -61,31 +67,40 @@
         <Class IRI="SocialIndicator"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasIndex"/>
+        <ObjectProperty IRI="belongs"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasIndicator"/>
+        <ObjectProperty IRI="conductedTo"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasInterval"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasReference"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasResource"/>
+        <ObjectProperty IRI="formalizes"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="instanceOf"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="is"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isGenerated"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="isIn"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="isResult"/>
+        <ObjectProperty IRI="isReference"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="useIndicator"/>
+        <ObjectProperty IRI="isType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isUsed"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="quantifies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="useMethod"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="author"/>
@@ -100,6 +115,9 @@
         <DataProperty IRI="id_region"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="justification"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="latitude"/>
     </Declaration>
     <Declaration>
@@ -109,7 +127,7 @@
         <DataProperty IRI="lower_bound"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="methodology"/>
+        <DataProperty IRI="management_measure"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="name"/>
@@ -162,6 +180,13 @@
     <Declaration>
         <NamedIndividual IRI="Uri"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="indicator_1"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="CustomIndicator"/>
+        <Class IRI="Indicator"/>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="EconomicIndicator"/>
         <Class IRI="Indicator"/>
@@ -171,77 +196,9 @@
         <Class IRI="Indicator"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Farm"/>
-        <ObjectMinCardinality cardinality="0">
-            <ObjectProperty IRI="hasIndex"/>
-            <Class IRI="Index"/>
-        </ObjectMinCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Farm"/>
-        <ObjectMinCardinality cardinality="0">
-            <ObjectProperty IRI="hasIndicator"/>
-            <Class IRI="Indicator"/>
-        </ObjectMinCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Index"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="isResult"/>
-            <Class IRI="Method"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Indicator"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="hasInterval"/>
-            <Class IRI="Interval"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Indicator"/>
-        <ObjectMinCardinality cardinality="0">
-            <ObjectProperty IRI="hasReference"/>
-            <Class IRI="Reference"/>
-        </ObjectMinCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="IndicatorRecord"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="instanceOf"/>
-            <Class IRI="Farm"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="IndicatorRecord"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="instanceOf"/>
-            <Class IRI="Indicator"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Method"/>
-        <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="useIndicator"/>
-            <Class IRI="Indicator"/>
-        </ObjectMinCardinality>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="SocialIndicator"/>
         <Class IRI="Indicator"/>
     </SubClassOf>
-    <DisjointClasses>
-        <Class IRI="Farm"/>
-        <Class IRI="Index"/>
-        <Class IRI="Indicator"/>
-        <Class IRI="IndicatorRecord"/>
-        <Class IRI="Interval"/>
-        <Class IRI="IntervalType"/>
-        <Class IRI="Method"/>
-        <Class IRI="Reference"/>
-        <Class IRI="Region"/>
-        <Class IRI="Resource"/>
-    </DisjointClasses>
     <ClassAssertion>
         <Class IRI="IntervalType"/>
         <NamedIndividual IRI="Boolean"/>
@@ -277,6 +234,10 @@
     <ClassAssertion>
         <Class IRI="IntervalType"/>
         <NamedIndividual IRI="Uri"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="EnviromentalIndicator"/>
+        <NamedIndividual IRI="indicator_1"/>
     </ClassAssertion>
     <DifferentIndividuals>
         <NamedIndividual IRI="Boolean"/>
@@ -289,32 +250,142 @@
         <NamedIndividual IRI="String"/>
         <NamedIndividual IRI="Uri"/>
     </DifferentIndividuals>
-    <SymmetricObjectProperty>
-        <ObjectProperty IRI="useIndicator"/>
-    </SymmetricObjectProperty>
+    <DataPropertyAssertion>
+        <DataProperty IRI="description"/>
+        <NamedIndividual IRI="indicator_1"/>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">A concentração máxima de potássio no solo não
+poderá exceder 5% da Capacidade de Troca Catiônica – CTC. 
+
+Quando esse limite for atingido, a aplicação de vinhaça ficará restrita à reposição desse nutriente em função da extração média pela cultura, que é de 185 kg de K 2 O por hectare por corte (PIRES; FERREIRA, 2008).
+
+Quanto aos nutrientes extraídos (requeridos) pela cultura de cana-de-açúcar, o nitrogênio é o mais importante. 
+
+No plantio da cana é necessário aplicar 30 kg/ha de nitrogênio; já na adubação da cana-soca, a quantidade recomendada para a cultura é de 60 kg/ha (SOUZA; LOBATO, 2004).</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="justification"/>
+        <NamedIndividual IRI="indicator_1"/>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">A vinhaça é usada tanto para se diminuírem custos de produção como
+também para dar um destino diferente dos rios ao subproduto, como era comum décadas atrás. No entanto, segundo Piacente (2005), tal subproduto pode ser muito poluente quando não armazenado e aplicado de forma adequada. Da mesma forma que a vinhaça, a torta pode acarretar sérios danos à manta freática, bem como ao solo em que foi depositada e usado incorretamente. Assim, seu depósito não pode ser feito diretamente no solo. Uma forma de armazenar corretamente a torta sem que cause impactos negativos ao ambiente é depositá-la sobre lonas plásticas.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="management_measure"/>
+        <NamedIndividual IRI="indicator_1"/>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Atendimento à Norma P4.231/06 da CETESB, que estabelece
+os critérios e procedimentos para armazenamento, transporte e aplicação da vinhaça.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="title"/>
+        <NamedIndividual IRI="indicator_1"/>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Quantidade de vinhaça/área aplicada com relação ao Potássio (K) e Nitrogênio (N)</Literal>
+    </DataPropertyAssertion>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasInterval"/>
-        <Class IRI="Indicator"/>
+        <ObjectProperty IRI="belongs"/>
+        <Class IRI="Resource"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasReference"/>
-        <Class IRI="Indicator"/>
+        <ObjectProperty IRI="conductedTo"/>
+        <Class IRI="Assessment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="formalizes"/>
+        <Class IRI="Reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="instanceOf"/>
+        <Class IRI="IndicatorRecord"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="is"/>
+        <Class IRI="CustomIndicator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="is"/>
+        <Class IRI="EconomicIndicator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="is"/>
+        <Class IRI="EnviromentalIndicator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="is"/>
+        <Class IRI="SocialIndicator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isGenerated"/>
+        <Class IRI="Index"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="isIn"/>
         <Class IRI="Farm"/>
     </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasInterval"/>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isReference"/>
+        <Class IRI="Indicator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isType"/>
+        <Class IRI="IntervalType"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isUsed"/>
+        <Class IRI="IndicatorRecord"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="quantifies"/>
         <Class IRI="Interval"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="useMethod"/>
+        <Class IRI="Method"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="belongs"/>
+        <Class IRI="Region"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasReference"/>
+        <ObjectProperty IRI="conductedTo"/>
+        <Class IRI="Farm"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="formalizes"/>
+        <Class IRI="Indicator"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="instanceOf"/>
+        <Class IRI="Indicator"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="is"/>
+        <Class IRI="Indicator"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isGenerated"/>
+        <Class IRI="Assessment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isIn"/>
+        <Class IRI="Region"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isReference"/>
         <Class IRI="Reference"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasResource"/>
-        <Class IRI="Resource"/>
+        <ObjectProperty IRI="isType"/>
+        <Class IRI="Interval"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isUsed"/>
+        <Class IRI="Assessment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="quantifies"/>
+        <Class IRI="Indicator"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="useMethod"/>
+        <Class IRI="Assessment"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="sustenable_relevance"/>
@@ -337,6 +408,10 @@
         <Class IRI="Farm"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="justification"/>
+        <Class IRI="Indicator"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="latitude"/>
         <Class IRI="Farm"/>
     </DataPropertyDomain>
@@ -349,7 +424,7 @@
         <Class IRI="Interval"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="methodology"/>
+        <DataProperty IRI="management_measure"/>
         <Class IRI="Indicator"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -365,20 +440,12 @@
         <Class IRI="Reference"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="recommendation"/>
-        <Class IRI="IndicatorRecord"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="sustenable_relevance"/>
         <Class IRI="Indicator"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="title"/>
         <Class IRI="Indicator"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="title"/>
-        <Class IRI="Reference"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="type"/>
@@ -388,17 +455,13 @@
         <DataProperty IRI="upper_bound"/>
         <Class IRI="Interval"/>
     </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="value"/>
-        <Class IRI="IndicatorRecord"/>
-    </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="author"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="description"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="holder"/>
@@ -407,6 +470,10 @@
     <DataPropertyRange>
         <DataProperty IRI="id_region"/>
         <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="justification"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="latitude"/>
@@ -421,8 +488,8 @@
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="methodology"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
+        <DataProperty IRI="management_measure"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="name"/>
@@ -442,7 +509,7 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="title"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="upper_bound"/>
@@ -452,17 +519,6 @@
         <DataProperty IRI="value"/>
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
-    <DisjointDataProperties>
-        <DataProperty IRI="description"/>
-        <DataProperty IRI="methodology"/>
-        <DataProperty IRI="sustenable_relevance"/>
-        <DataProperty IRI="title"/>
-    </DisjointDataProperties>
-    <DisjointDataProperties>
-        <DataProperty IRI="description"/>
-        <DataProperty IRI="methodology"/>
-        <DataProperty IRI="title"/>
-    </DisjointDataProperties>
     <DisjointDataProperties>
         <DataProperty IRI="recommendation"/>
         <DataProperty IRI="value"/>
