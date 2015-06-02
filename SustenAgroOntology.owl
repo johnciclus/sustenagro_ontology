@@ -1,0 +1,490 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.biomac.icmc.usp.br:8080/sustenagro/"
+     xml:base="http://www.biomac.icmc.usp.br:8080/sustenagro/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/CreateAt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/CreateAt"/>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/Description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/Description">
+        <rdfs:domain rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/Indicator"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/Identificator -->
+
+    <owl:DatatypeProperty rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/Identificator">
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/Label -->
+
+    <owl:DatatypeProperty rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/Label">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/Title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/Title">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/UpdateAt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/UpdateAt"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/AgriculturalProductionSystem -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/AgriculturalProductionSystem"/>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/Agro_ClimaticAptitude -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/Agro_ClimaticAptitude">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/GeographicalLocationOfCultureInRelationToClimateAndSoilAptitude"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/AnnexationOfDocuments -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/AnnexationOfDocuments">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/ConfirmationOfRegistrationOfTheLegalReserveArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/AnnualWaterDeficiency -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/AnnualWaterDeficiency">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/GeographicLocationOfCultureInRelativeClimatiAptitude"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/AnthropicFactorOrConservationPractices -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/AnthropicFactorOrConservationPractices">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/QuantificationOfErosionPotentialAccordingToTheUniversalEquationOfSoilLoss"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/Attribute -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/Attribute"/>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/AverageAnnualTemperature -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/AverageAnnualTemperature">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/GeographicLocationOfCultureInRelativeClimatiAptitude"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/BurningLocal -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/BurningLocal">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/OccurrenceOfBurntStrawOnTheCountryside"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/ClimaticFactorOrFactorOfRaiFallErosivity -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/ClimaticFactorOrFactorOfRaiFallErosivity">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/QuantificationOfErosionPotentialAccordingToTheUniversalEquationOfSoilLoss"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/ComplianceWithTheTermsOfCommitmentToEnvironmentalRecovery -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/ComplianceWithTheTermsOfCommitmentToEnvironmentalRecovery">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/EnviromentalIndicator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/ConfirmationOfRegistrationOfTheLegalReserveArea -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/ConfirmationOfRegistrationOfTheLegalReserveArea">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/EnviromentalIndicator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/ConservedArea -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/ConservedArea">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/PermanentPreservationAreasRecovered_Preserved"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/Depth -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/Depth">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/GeographicalLocationOfCultureInEdaphicRelation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/Dimension -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/Dimension"/>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/EconomicIndicator -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/EconomicIndicator">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/Indicator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/EdaphicAptitude -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/EdaphicAptitude">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/GeographicalLocationOfCultureInRelationToClimateAndSoilAptitude"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/EmissionAndSuspensionOfMicroparticles -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/EmissionAndSuspensionOfMicroparticles">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/EnviromentalIndicator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/EnviromentalDimension -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/EnviromentalDimension">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/EnviromentalIndicator -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/EnviromentalIndicator">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/Indicator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/EnvironmentalLiabilities -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/EnvironmentalLiabilities">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/ComplianceWithTheTermsOfCommitmentToEnvironmentalRecovery"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/Evaluation -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/Evaluation"/>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/FactorOfDeclivityOfTheHill -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/FactorOfDeclivityOfTheHill">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/QuantificationOfErosionPotentialAccordingToTheUniversalEquationOfSoilLoss"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/GeographicLocationOfCultureInRelativeClimatiAptitude -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/GeographicLocationOfCultureInRelativeClimatiAptitude">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/EnviromentalIndicator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/GeographicalLocationOfCultureInEdaphicRelation -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/GeographicalLocationOfCultureInEdaphicRelation">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/EnviromentalIndicator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/GeographicalLocationOfCultureInRelationToClimateAndSoilAptitude -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/GeographicalLocationOfCultureInRelationToClimateAndSoilAptitude">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/EnviromentalIndicator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/HydricIndex -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/HydricIndex">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/GeographicLocationOfCultureInRelativeClimatiAptitude"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/Indicator -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/Indicator"/>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/IndicatorComponent -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/IndicatorComponent"/>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/Interval -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/Interval"/>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/IntervalType -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/IntervalType"/>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/LengthOfTheHill -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/LengthOfTheHill">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/QuantificationOfErosionPotentialAccordingToTheUniversalEquationOfSoilLoss"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/ManagementRecommendation -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/ManagementRecommendation"/>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/Method -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/Method"/>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/NaturalFertility -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/NaturalFertility">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/GeographicalLocationOfCultureInEdaphicRelation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/OccurrenceOfBurntStrawOnTheCountryside -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/OccurrenceOfBurntStrawOnTheCountryside">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/EnviromentalIndicator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/ParticulateMatter -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/ParticulateMatter">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/EmissionAndSuspensionOfMicroparticles"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/PermanentPreservationAreasRecovered_Preserved -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/PermanentPreservationAreasRecovered_Preserved">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/EnviromentalIndicator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/ProductionUnit -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/ProductionUnit"/>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/QuantificationOfErosionPotentialAccordingToTheUniversalEquationOfSoilLoss -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/QuantificationOfErosionPotentialAccordingToTheUniversalEquationOfSoilLoss">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/EnviromentalIndicator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/RecoveredArea -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/RecoveredArea">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/PermanentPreservationAreasRecovered_Preserved"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/Reference -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/Reference"/>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/Region -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/Region"/>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/Resource -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/Resource"/>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/RootPenetrationResistance -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/RootPenetrationResistance">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/SoilCompaction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/SocialIndicator -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/SocialIndicator">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/Indicator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/SoilAttribute -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/SoilAttribute">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/Attribute"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/SoilCompaction -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/SoilCompaction">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/EnviromentalIndicator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/SoilErodibilityFactor -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/SoilErodibilityFactor">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/QuantificationOfErosionPotentialAccordingToTheUniversalEquationOfSoilLoss"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/Stoniness -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/Stoniness">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/GeographicalLocationOfCultureInEdaphicRelation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/SystemProductUnitAttribute -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/SystemProductUnitAttribute"/>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/Variable -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/Variable"/>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/VariableComponent -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/VariableComponent"/>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/VegetationCoverOrUseFactorAndSoilManagement -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/VegetationCoverOrUseFactorAndSoilManagement">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/QuantificationOfErosionPotentialAccordingToTheUniversalEquationOfSoilLoss"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biomac.icmc.usp.br:8080/sustenagro/WeatherAttribute -->
+
+    <owl:Class rdf:about="http://www.biomac.icmc.usp.br:8080/sustenagro/WeatherAttribute">
+        <rdfs:subClassOf rdf:resource="http://www.biomac.icmc.usp.br:8080/sustenagro/Attribute"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
