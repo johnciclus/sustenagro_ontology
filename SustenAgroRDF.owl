@@ -24,6 +24,7 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
     <Prefix name="sustenagro" IRI="http://bio.icmc.usp.br/sustenagro#"/>
+    <Prefix name="sustenagro2" IRI="http://semantic.icmc.usp.br/sustenagro#"/>
     <Declaration>
         <Class IRI="http://dbpedia.org/ontology/AdministrativeRegion"/>
     </Declaration>
@@ -79,9 +80,6 @@
         <Class IRI="AccidentsIncidenceCategory"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Acknowledge"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="AdequacyOfBoilers"/>
     </Declaration>
     <Declaration>
@@ -130,9 +128,6 @@
         <Class IRI="AttendanceToSprayingRestriction"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Audio"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="AvailabilityOfEvaluationResults"/>
     </Declaration>
     <Declaration>
@@ -149,12 +144,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="BagasseDestinationCategory"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="BeginningOfHarvestDate"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="BeginningOfPlantingDate"/>
     </Declaration>
     <Declaration>
         <Class IRI="BiodiversityAttribute"/>
@@ -220,18 +209,6 @@
         <Class IRI="CropPlanning"/>
     </Declaration>
     <Declaration>
-        <Class IRI="DataType"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Date"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DateTime"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Decimal"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="EconomicIndicator"/>
     </Declaration>
     <Declaration>
@@ -262,13 +239,7 @@
         <Class IRI="EnergyAttribute"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Entity"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="EnvironmentalIndicator"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="EstablishmentDate"/>
     </Declaration>
     <Declaration>
         <Class IRI="Evaluation"/>
@@ -298,22 +269,10 @@
         <Class IRI="FiltercakeAndAshesDestinationCategory"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Financing"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="FinishOfHarvestDate"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="FinishOfPlantingDate"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="FulfillmentOfLaborLaws"/>
     </Declaration>
     <Declaration>
         <Class IRI="GeneralAttribute"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="GeoLocation"/>
     </Declaration>
     <Declaration>
         <Class IRI="GovernmentSubsidy"/>
@@ -328,12 +287,6 @@
         <Class IRI="HarvestAttribute"/>
     </Declaration>
     <Declaration>
-        <Class IRI="HarvestDates"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="HarvestRange"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="HarvestTypeUsed"/>
     </Declaration>
     <Declaration>
@@ -341,9 +294,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="HealthAttribute"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Image"/>
     </Declaration>
     <Declaration>
         <Class IRI="Indicator"/>
@@ -356,9 +306,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="InitiativesOrActionsThatPromoteTheLocalCommunityWell-Being"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="InnovationDevelopmentProjects"/>
     </Declaration>
     <Declaration>
         <Class IRI="InputWidget"/>
@@ -388,9 +335,6 @@
         <Class IRI="JobsAttribute"/>
     </Declaration>
     <Declaration>
-        <Class IRI="LinkWithOtherBusinessOrInvestmentGroups"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="Logistic"/>
     </Declaration>
     <Declaration>
@@ -412,22 +356,16 @@
         <Class IRI="MonitoringOfFlowOfSugarcane"/>
     </Declaration>
     <Declaration>
-        <Class IRI="NaturalRecoveryAndInducedAreas"/>
+        <Class IRI="MultipleCategory"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Number"/>
+        <Class IRI="NaturalRecoveryAndInducedAreas"/>
     </Declaration>
     <Declaration>
         <Class IRI="OperationalEfficiencyCategory"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Output"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="OutputWidget"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="PartnershipsForResearchOrImprovementOfTheSystem"/>
     </Declaration>
     <Declaration>
         <Class IRI="PlanToExpandProductionViaImprovedProductivity"/>
@@ -460,16 +398,10 @@
         <Class IRI="PlantingAttribute"/>
     </Declaration>
     <Declaration>
-        <Class IRI="PlantingDates"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="PlantingPlanConsideringThePrecursorUseOfArea"/>
     </Declaration>
     <Declaration>
         <Class IRI="PlantingPlanConsideringThePrecursorUseOfAreaCategory"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="PlantingRange"/>
     </Declaration>
     <Declaration>
         <Class IRI="PoliticalVariable"/>
@@ -527,9 +459,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="ProductionUnitFeature"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ProductionUnitName"/>
     </Declaration>
     <Declaration>
         <Class IRI="ProductionUnitType"/>
@@ -592,22 +521,16 @@
         <Class IRI="SafetyAttribute"/>
     </Declaration>
     <Declaration>
-        <Class IRI="SelectMultiple"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="SelectOne"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="SharingOfRisksBetweenSuppliersAndProductionPlant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SimpleCategory"/>
     </Declaration>
     <Declaration>
         <Class IRI="SocialIndicator"/>
     </Declaration>
     <Declaration>
         <Class IRI="SoilsAttribute"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="String"/>
     </Declaration>
     <Declaration>
         <Class IRI="SubProductsAttribute"/>
@@ -661,25 +584,10 @@
         <Class IRI="TechnologicalEfficiencyInTheIndustrial"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Text"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="TotalRecoverableSugarIndex"/>
     </Declaration>
     <Declaration>
         <Class IRI="TotalRecoverableSugarIndexCategory"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="TotalValue"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="TotalValueInvestedInTechnologicInAgriculturalPhase"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="TotalValueInvestedInTechnologicInIndustrialPhase"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="TotalValuePlaneedForInvestmentToProductionDrainage"/>
     </Declaration>
     <Declaration>
         <Class IRI="TrafficControl"/>
@@ -692,6 +600,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="TrueFalse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Unity"/>
     </Declaration>
     <Declaration>
         <Class IRI="UseOfAdequateTerracingToTheSoilSlopeAndHarvestMechanization"/>
@@ -751,9 +662,6 @@
         <Class IRI="VarietiesCategory"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Video"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="VinasseAndEthanolRelationCategory"/>
     </Declaration>
     <Declaration>
@@ -796,6 +704,24 @@
         <ObjectProperty IRI="compose"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="hasAgriculturalProductionSystem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasAvailabilityOfEvaluationResults"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasCanavialLongevity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasMicroRegion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasProductionUnitType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSugarcaneSource"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="hasWeight"/>
     </Declaration>
     <Declaration>
@@ -809,6 +735,45 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="dataValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasBeginningOfHarvestDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasBeginningOfPlantingDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasEstablishmentDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasFinancing"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasFinishOfHarvestDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasFinishOfPlantingDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasInnovationDevelopmentProjects"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasLinkWithOtherBusinessOrInvestmentGroups"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasPartnershipsForResearchOrImprovementOfTheSystem"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasProductionUnitName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasTotalValueInvestedInTechnologicInAgriculturalPhase"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasTotalValueInvestedInTechnologicInIndustrialPhase"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasTotalValuePlaneedForInvestmentToProductionDrainage"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="weight"/>
@@ -1543,6 +1508,9 @@
         <NamedIndividual IRI="85tnha"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty abbreviatedIRI="sustenagro:features"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
     </Declaration>
     <Declaration>
@@ -1565,6 +1533,9 @@
     </Declaration>
     <Declaration>
         <Datatype abbreviatedIRI="xsd:boolean"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
     </Declaration>
     <Declaration>
         <Datatype abbreviatedIRI="xsd:double"/>
@@ -1628,14 +1599,6 @@
     <SubClassOf>
         <Class IRI="http://dbpedia.org/ontology/MicroRegion"/>
         <Class IRI="http://dbpedia.org/ontology/GovernmentalAdministrativeRegion"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://dbpedia.org/ontology/MicroRegion"/>
-        <Class IRI="ProductionUnitFeature"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://dbpedia.org/ontology/MicroRegion"/>
-        <Class IRI="SelectOne"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://dbpedia.org/ontology/PopulatedPlace"/>
@@ -1709,10 +1672,6 @@
     <SubClassOf>
         <Class IRI="AccidentsIncidenceCategory"/>
         <Class IRI="Categorical"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Acknowledge"/>
-        <Class IRI="DataType"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="AdequacyOfBoilers"/>
@@ -1797,10 +1756,6 @@
         <Class IRI="ProductionUnitFeature"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="AgriculturalProductionSystem"/>
-        <Class IRI="SelectOne"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="AtmosphereAttribute"/>
         <Class IRI="EnvironmentalIndicator"/>
     </SubClassOf>
@@ -1853,16 +1808,8 @@
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Audio"/>
-        <Class IRI="DataType"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="AvailabilityOfEvaluationResults"/>
         <Class IRI="ProductionUnitFeature"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="AvailabilityOfEvaluationResults"/>
-        <Class IRI="SelectOne"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="AverageSalaryCategory"/>
@@ -1899,22 +1846,6 @@
         <Class IRI="Categorical"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="BeginningOfHarvestDate"/>
-        <Class IRI="Date"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="BeginningOfHarvestDate"/>
-        <Class IRI="HarvestDates"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="BeginningOfPlantingDate"/>
-        <Class IRI="Date"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="BeginningOfPlantingDate"/>
-        <Class IRI="PlantingDates"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="BiodiversityAttribute"/>
         <Class IRI="EnvironmentalIndicator"/>
     </SubClassOf>
@@ -1946,10 +1877,6 @@
         <Class IRI="Categorical"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Boolean"/>
-        <Class IRI="DataType"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="BufferStocks"/>
         <Class IRI="CostAttribute"/>
     </SubClassOf>
@@ -1963,10 +1890,6 @@
     <SubClassOf>
         <Class IRI="CanavialLongevity"/>
         <Class IRI="ProductionUnitFeature"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="CanavialLongevity"/>
-        <Class IRI="SelectOne"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Categorical"/>
@@ -2070,18 +1993,6 @@
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Date"/>
-        <Class IRI="DataType"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DateTime"/>
-        <Class IRI="DataType"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Decimal"/>
-        <Class IRI="DataType"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="EconomicIndicator"/>
         <Class IRI="Indicator"/>
     </SubClassOf>
@@ -2161,14 +2072,6 @@
         <Class IRI="Indicator"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="EstablishmentDate"/>
-        <Class IRI="Date"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="EstablishmentDate"/>
-        <Class IRI="ProductionUnitFeature"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="ExistNo"/>
         <Class IRI="Boolean"/>
     </SubClassOf>
@@ -2218,30 +2121,6 @@
         <Class IRI="Categorical"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Financing"/>
-        <Class IRI="ProductionUnitFeature"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Financing"/>
-        <Class IRI="String"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="FinishOfHarvestDate"/>
-        <Class IRI="Date"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="FinishOfHarvestDate"/>
-        <Class IRI="HarvestDates"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="FinishOfPlantingDate"/>
-        <Class IRI="Date"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="FinishOfPlantingDate"/>
-        <Class IRI="PlantingDates"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="FulfillmentOfLaborLaws"/>
         <Class IRI="RegulatoryAttendanceAttribute"/>
     </SubClassOf>
@@ -2255,10 +2134,6 @@
     <SubClassOf>
         <Class IRI="GeneralAttribute"/>
         <Class IRI="EnvironmentalIndicator"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="GeoLocation"/>
-        <Class IRI="DataType"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="GovernmentSubsidy"/>
@@ -2291,14 +2166,6 @@
         <Class IRI="EnvironmentalIndicator"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="HarvestDates"/>
-        <Class IRI="ProductionUnitFeature"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="HarvestRange"/>
-        <Class IRI="ProductionUnitFeature"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="HarvestTypeUsed"/>
         <Class IRI="HarvestAttribute"/>
     </SubClassOf>
@@ -2316,10 +2183,6 @@
     <SubClassOf>
         <Class IRI="HealthAttribute"/>
         <Class IRI="SocialIndicator"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Image"/>
-        <Class IRI="DataType"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Indicator"/>
@@ -2346,14 +2209,6 @@
             <ObjectProperty IRI="value"/>
             <Class IRI="YesNo"/>
         </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="InnovationDevelopmentProjects"/>
-        <Class IRI="ProductionUnitFeature"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="InnovationDevelopmentProjects"/>
-        <Class IRI="String"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="InputWidget"/>
@@ -2413,14 +2268,6 @@
         <Class IRI="SocialIndicator"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="LinkWithOtherBusinessOrInvestmentGroups"/>
-        <Class IRI="ProductionUnitFeature"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="LinkWithOtherBusinessOrInvestmentGroups"/>
-        <Class IRI="String"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="Logistic"/>
         <Class IRI="ProductionEfficiencyFeature"/>
     </SubClassOf>
@@ -2470,6 +2317,10 @@
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="MultipleCategory"/>
+        <Class IRI="Categorical"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="NaturalRecoveryAndInducedAreas"/>
         <Class IRI="BiodiversityAttribute"/>
     </SubClassOf>
@@ -2481,28 +2332,12 @@
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Number"/>
-        <Class IRI="DataType"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="OperationalEfficiencyCategory"/>
         <Class IRI="Categorical"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Output"/>
-        <Class IRI="DataType"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="OutputWidget"/>
         <Class IRI="Widget"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="PartnershipsForResearchOrImprovementOfTheSystem"/>
-        <Class IRI="ProductionUnitFeature"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="PartnershipsForResearchOrImprovementOfTheSystem"/>
-        <Class IRI="Text"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="PlanToExpandProductionViaImprovedProductivity"/>
@@ -2587,10 +2422,6 @@
         <Class IRI="EnvironmentalIndicator"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="PlantingDates"/>
-        <Class IRI="ProductionUnitFeature"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="PlantingPlanConsideringThePrecursorUseOfArea"/>
         <Class IRI="SoilsAttribute"/>
     </SubClassOf>
@@ -2604,10 +2435,6 @@
     <SubClassOf>
         <Class IRI="PlantingPlanConsideringThePrecursorUseOfAreaCategory"/>
         <Class IRI="Categorical"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="PlantingRange"/>
-        <Class IRI="ProductionUnitFeature"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="PoliticalVariable"/>
@@ -2717,27 +2544,15 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="ProductionUnit"/>
-        <Class IRI="Entity"/>
+        <Class IRI="Unity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="ProductionUnitFeature"/>
         <Class IRI="Feature"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="ProductionUnitName"/>
-        <Class IRI="ProductionUnitFeature"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="ProductionUnitName"/>
-        <Class IRI="String"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="ProductionUnitType"/>
         <Class IRI="ProductionUnitFeature"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="ProductionUnitType"/>
-        <Class IRI="SelectOne"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="ProductivityAttribute"/>
@@ -2893,14 +2708,6 @@
         <Class IRI="SocialIndicator"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="SelectMultiple"/>
-        <Class IRI="DataType"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="SelectOne"/>
-        <Class IRI="DataType"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="SharingOfRisksBetweenSuppliersAndProductionPlant"/>
         <Class IRI="ProductivityAttribute"/>
     </SubClassOf>
@@ -2912,16 +2719,16 @@
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="SimpleCategory"/>
+        <Class IRI="Categorical"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="SocialIndicator"/>
         <Class IRI="Indicator"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="SoilsAttribute"/>
         <Class IRI="EnvironmentalIndicator"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="String"/>
-        <Class IRI="DataType"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="SubProductsAttribute"/>
@@ -2982,10 +2789,6 @@
         <Class IRI="ProductionUnitFeature"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="SugarcaneSource"/>
-        <Class IRI="SelectOne"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="SugarcaneTransportOptimizationForIndustry"/>
         <Class IRI="CostAttribute"/>
     </SubClassOf>
@@ -3024,10 +2827,6 @@
         <Class IRI="TechnologicalEfficiencyFeature"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Text"/>
-        <Class IRI="DataType"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="TotalRecoverableSugarIndex"/>
         <Class IRI="ProductivityAttribute"/>
     </SubClassOf>
@@ -3041,34 +2840,6 @@
     <SubClassOf>
         <Class IRI="TotalRecoverableSugarIndexCategory"/>
         <Class IRI="Categorical"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="TotalValue"/>
-        <Class IRI="ProductionUnitFeature"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="TotalValueInvestedInTechnologicInAgriculturalPhase"/>
-        <Class IRI="Number"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="TotalValueInvestedInTechnologicInAgriculturalPhase"/>
-        <Class IRI="TotalValue"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="TotalValueInvestedInTechnologicInIndustrialPhase"/>
-        <Class IRI="Number"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="TotalValueInvestedInTechnologicInIndustrialPhase"/>
-        <Class IRI="TotalValue"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="TotalValuePlaneedForInvestmentToProductionDrainage"/>
-        <Class IRI="Number"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="TotalValuePlaneedForInvestmentToProductionDrainage"/>
-        <Class IRI="TotalValue"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="TrafficControl"/>
@@ -3262,10 +3033,6 @@
     <SubClassOf>
         <Class IRI="VarietiesCategory"/>
         <Class IRI="Categorical"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Video"/>
-        <Class IRI="DataType"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="VinasseAndEthanolRelationCategory"/>
@@ -5416,6 +5183,24 @@
         <ObjectProperty IRI="value"/>
     </SubObjectPropertyOf>
     <FunctionalObjectProperty>
+        <ObjectProperty IRI="hasAgriculturalProductionSystem"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="hasAvailabilityOfEvaluationResults"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="hasCanavialLongevity"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="hasMicroRegion"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="hasProductionUnitType"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="hasSugarcaneSource"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
         <ObjectProperty IRI="hasWeight"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
@@ -5430,15 +5215,134 @@
         <Class IRI="ProductionUnitType"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="hasAgriculturalProductionSystem"/>
+        <Class IRI="SimpleCategory"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasAvailabilityOfEvaluationResults"/>
+        <Class IRI="SimpleCategory"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasCanavialLongevity"/>
+        <Class IRI="SimpleCategory"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasMicroRegion"/>
+        <Class IRI="SimpleCategory"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasProductionUnitType"/>
+        <Class IRI="SimpleCategory"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSugarcaneSource"/>
+        <Class IRI="SimpleCategory"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="hasWeight"/>
         <Class IRI="Value"/>
     </ObjectPropertyRange>
     <FunctionalDataProperty>
         <DataProperty IRI="dataValue"/>
     </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasBeginningOfHarvestDate"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasBeginningOfPlantingDate"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasEstablishmentDate"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasFinancing"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasFinishOfHarvestDate"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasFinishOfPlantingDate"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasInnovationDevelopmentProjects"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasLinkWithOtherBusinessOrInvestmentGroups"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasPartnershipsForResearchOrImprovementOfTheSystem"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasProductionUnitName"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasTotalValueInvestedInTechnologicInAgriculturalPhase"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasTotalValueInvestedInTechnologicInIndustrialPhase"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasTotalValuePlaneedForInvestmentToProductionDrainage"/>
+    </FunctionalDataProperty>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="pt:mapa"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="dataValue"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasBeginningOfHarvestDate"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasBeginningOfPlantingDate"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasEstablishmentDate"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasFinancing"/>
+        <Datatype abbreviatedIRI="xsd:language"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasFinishOfHarvestDate"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasFinishOfPlantingDate"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasInnovationDevelopmentProjects"/>
+        <Datatype abbreviatedIRI="xsd:language"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasLinkWithOtherBusinessOrInvestmentGroups"/>
+        <Datatype abbreviatedIRI="xsd:language"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasPartnershipsForResearchOrImprovementOfTheSystem"/>
+        <Datatype abbreviatedIRI="xsd:language"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasProductionUnitName"/>
+        <Datatype abbreviatedIRI="xsd:language"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasTotalValueInvestedInTechnologicInAgriculturalPhase"/>
+        <Datatype abbreviatedIRI="owl:real"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasTotalValueInvestedInTechnologicInIndustrialPhase"/>
+        <Datatype abbreviatedIRI="owl:real"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasTotalValuePlaneedForInvestmentToProductionDrainage"/>
+        <Datatype abbreviatedIRI="owl:real"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="weight"/>
@@ -6686,26 +6590,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>BeginningOfHarvestDate</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Beginning of harvest date</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>BeginningOfHarvestDate</IRI>
-        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Data de início da colheita</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>BeginningOfPlantingDate</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Beginning of planting date</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>BeginningOfPlantingDate</IRI>
-        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Data de início do plantio</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Below10</IRI>
         <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Abaixo de 10</Literal>
     </AnnotationAssertion>
@@ -7100,16 +6984,6 @@
         <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Planejamento de safra</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="sustenagro:features"/>
-        <IRI>DataType</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Datatype</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="sustenagro:features"/>
-        <IRI>DataType</IRI>
-        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tipo de dado</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>DifficultyOfAdhesionAndUseOfInnovations</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Difficulty of adhesion and use of innovations</Literal>
@@ -7381,16 +7255,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>EstablishmentDate</IRI>
-        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Data de fundação</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>EstablishmentDate</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Establishment date</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Evaluation</IRI>
         <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Avaliação</Literal>
     </AnnotationAssertion>
@@ -7523,36 +7387,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>FiltercakeAndAshesDestinationCategory</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Filter cake and ashes destination category</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Financing</IRI>
-        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Financiamento</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Financing</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Financing</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>FinishOfHarvestDate</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Finish of harvest date</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>FinishOfHarvestDate</IRI>
-        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">data de término da colheita</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>FinishOfPlantingDate</IRI>
-        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Data de término da colheita</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>FinishOfPlantingDate</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Finish of planting date</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7713,26 +7547,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>HarvestAttribute</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Harvest attribute</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>HarvestDates</IRI>
-        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Datas da colheita</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>HarvestDates</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Harvest dates</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>HarvestRange</IRI>
-        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Faixa da colheita</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>HarvestRange</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Harvest range</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="weight"/>
@@ -7956,16 +7770,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>InnovationDevelopmentProjects</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Innovation and/or development projects</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>InnovationDevelopmentProjects</IRI>
-        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Projetos de inovação e/ou desenvolvimento (BNDES, Finep)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Integer</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Integer</Literal>
     </AnnotationAssertion>
@@ -8108,16 +7912,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>LessEfficientBoilers</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Less efficient boilers (low pressure)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>LinkWithOtherBusinessOrInvestmentGroups</IRI>
-        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Ligação com outros grupos empresariais ou de investimentos</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>LinkWithOtherBusinessOrInvestmentGroups</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Link with other business groups or investment</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8455,6 +8249,16 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">More efficient boilers (new and more pressure)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>MultipleCategory</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Categoría múltiple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>MultipleCategory</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Multiple category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty IRI="weight"/>
         <IRI>NaturalRecoveryAndInducedAreas</IRI>
         <Literal datatypeIRI="&xsd;double">2.0</Literal>
@@ -8531,16 +8335,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Number</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Number</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Number</IRI>
-        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Número</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>OneAndHalfYear</IRI>
         <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Cana de um ano e meio</Literal>
     </AnnotationAssertion>
@@ -8608,16 +8402,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>PartiallyClosedCircuit</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Partially closed circuit</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>PartnershipsForResearchOrImprovementOfTheSystem</IRI>
-        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Parcerias para pesquisa ou aprimoramento do sistema</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>PartnershipsForResearchOrImprovementOfTheSystem</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Partnerships for research or improvement of the system</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="weight"/>
@@ -8755,16 +8539,6 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Planting attribute</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>PlantingDates</IRI>
-        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Datas do plantio</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>PlantingDates</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Planting dates</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="weight"/>
         <IRI>PlantingPlanConsideringThePrecursorUseOfArea</IRI>
         <Literal datatypeIRI="&xsd;double">2.0</Literal>
@@ -8788,16 +8562,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>PlantingPlanConsideringThePrecursorUseOfAreaCategory</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Planting plan considering the precursor use of area category</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>PlantingRange</IRI>
-        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Faixa do plantio</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>PlantingRange</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Planting range</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -9118,16 +8882,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>ProductionUnitFeature</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Production unit feature</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>ProductionUnitName</IRI>
-        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Nome da unidade produtiva</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>ProductionUnitName</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Production unit name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -9476,6 +9230,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SimpleCategory</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Categoría simple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SimpleCategory</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Simple category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>SocialIndicator</IRI>
         <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Indicador social</Literal>
     </AnnotationAssertion>
@@ -9745,16 +9509,6 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Technological efficiency in the industry</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Text</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Text</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Text</IRI>
-        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Texto</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="weight"/>
         <IRI>TotalRecoverableSugarIndex</IRI>
         <Literal datatypeIRI="&xsd;double">2.0</Literal>
@@ -9788,46 +9542,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>TotalUsage</IRI>
         <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Uso total</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>TotalValue</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Total value</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>TotalValue</IRI>
-        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Valor total</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>TotalValueInvestedInTechnologicInAgriculturalPhase</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Total value invested in technologic in agricultural phase</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>TotalValueInvestedInTechnologicInAgriculturalPhase</IRI>
-        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Valor total investido em tecnologia na fase agrícola (até a fase atual)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>TotalValueInvestedInTechnologicInIndustrialPhase</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Total value invested in technologic in industrial phase</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>TotalValueInvestedInTechnologicInIndustrialPhase</IRI>
-        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Valor total investido em tecnologia na fase industrial (até a fase atual)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>TotalValuePlaneedForInvestmentToProductionDrainage</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Total value planeed for investment to production drainage</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>TotalValuePlaneedForInvestmentToProductionDrainage</IRI>
-        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Valor total previsto para investimento para escoamento da produção</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -9898,6 +9612,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>TrueFalse</IRI>
         <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Verdadeiro/Falso</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Unity</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Unidade</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Unity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Unit</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -10413,6 +10137,196 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>dataValue</IRI>
         <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">valor do dado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasAgriculturalProductionSystem</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It has agricultural production system</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasAgriculturalProductionSystem</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem sistema de produção agrícola</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasAvailabilityOfEvaluationResults</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It has availability of evaluations results</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasAvailabilityOfEvaluationResults</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem disponibilização dos resultados da avaliação</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasBeginningOfHarvestDate</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It has beginning of harvest date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasBeginningOfHarvestDate</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem data de início da colheita</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasBeginningOfPlantingDate</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It has beginning of planting date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasBeginningOfPlantingDate</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem data de início do plantio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasCanavialLongevity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It has canavial longevity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasCanavialLongevity</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem longevidade do canvial</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasEstablishmentDate</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It has establishment date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasEstablishmentDate</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem data de fundação</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasFinancing</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It has financing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasFinancing</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem finanzamento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasFinishOfHarvestDate</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It has finish of harvest date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasFinishOfHarvestDate</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem data de término da colheita</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasFinishOfPlantingDate</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It has finish of planting date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasFinishOfPlantingDate</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem data de término da colheita</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasInnovationDevelopmentProjects</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It has innovation development projects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasInnovationDevelopmentProjects</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem projetos de innovação e/ou desenvolvimento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasLinkWithOtherBusinessOrInvestmentGroups</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It has link with other business groups or investment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasLinkWithOtherBusinessOrInvestmentGroups</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem ligação com outros grupos empresariais ou de investimentos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasMicroRegion</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It has microregion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasMicroRegion</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem microregion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasPartnershipsForResearchOrImprovementOfTheSystem</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It has partnerships for research or improvement of the system</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasPartnershipsForResearchOrImprovementOfTheSystem</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem parcerias para pesquisa ou aprimoramento do sistema</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasProductionUnitName</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It has production name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasProductionUnitName</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem nome da unidade produtiva</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasProductionUnitType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It has production unit type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasProductionUnitType</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem tipo de unidade de produção</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasSugarcaneSource</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It has sugarcane source</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasSugarcaneSource</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem origem da cana</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasTotalValueInvestedInTechnologicInAgriculturalPhase</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It has total value invested in technologicIn agricultural phase</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasTotalValueInvestedInTechnologicInAgriculturalPhase</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem valor total investido em tecnologia na fase agrícola (até a fase atual)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasTotalValueInvestedInTechnologicInIndustrialPhase</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It has total value invested in technologicIn industrial phase</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasTotalValueInvestedInTechnologicInIndustrialPhase</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem valor total investido em tecnologia na fase industrial (até a fase atual</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasTotalValuePlaneedForInvestmentToProductionDrainage</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It has total value planeed for investment to production drainage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasTotalValuePlaneedForInvestmentToProductionDrainage</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem valor total previsto para investimento para escoamento da produção</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
