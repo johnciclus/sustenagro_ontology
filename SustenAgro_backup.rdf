@@ -159,7 +159,6 @@
         <rdfs:label xml:lang="en">applied to</rdfs:label>
         <rdfs:label xml:lang="pt">aplicado a</rdfs:label>
         <rdfs:domain rdf:resource="&sustenagro2;Evaluation"/>
-        <rdfs:range rdf:resource="&sustenagro2;ProductionUnitType"/>
     </owl:ObjectProperty>
     
 
@@ -173,13 +172,20 @@
     
 
 
+    <!-- http://semantic.icmc.usp.br/sustenagro#has -->
+
+    <owl:ObjectProperty rdf:about="&sustenagro2;has"/>
+    
+
+
     <!-- http://semantic.icmc.usp.br/sustenagro#hasAgriculturalProductionSystem -->
 
     <owl:ObjectProperty rdf:about="&sustenagro2;hasAgriculturalProductionSystem">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en">It has agricultural production system</rdfs:label>
+        <rdfs:label xml:lang="en">has agricultural production system</rdfs:label>
         <rdfs:label xml:lang="pt">Tem sistema de produção agrícola</rdfs:label>
-        <rdfs:range rdf:resource="&sustenagro2;SimpleCategory"/>
+        <rdfs:range rdf:resource="&sustenagro2;AgriculturalProductionSystemCategory"/>
+        <rdfs:subPropertyOf rdf:resource="&sustenagro2;has"/>
     </owl:ObjectProperty>
     
 
@@ -188,9 +194,10 @@
 
     <owl:ObjectProperty rdf:about="&sustenagro2;hasAvailabilityOfEvaluationResults">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en">It has availability of evaluations results</rdfs:label>
+        <rdfs:label xml:lang="en">has availability of evaluations results</rdfs:label>
         <rdfs:label xml:lang="pt">Tem disponibilização dos resultados da avaliação</rdfs:label>
-        <rdfs:range rdf:resource="&sustenagro2;SimpleCategory"/>
+        <rdfs:range rdf:resource="&sustenagro2;AvailabilityOfEvaluationResultsCategory"/>
+        <rdfs:subPropertyOf rdf:resource="&sustenagro2;has"/>
     </owl:ObjectProperty>
     
 
@@ -199,9 +206,10 @@
 
     <owl:ObjectProperty rdf:about="&sustenagro2;hasCanavialLongevity">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en">It has canavial longevity</rdfs:label>
+        <rdfs:label xml:lang="en">has canavial longevity</rdfs:label>
         <rdfs:label xml:lang="pt">Tem longevidade do canvial</rdfs:label>
-        <rdfs:range rdf:resource="&sustenagro2;SimpleCategory"/>
+        <rdfs:range rdf:resource="&sustenagro2;CanavialLongevityCategory"/>
+        <rdfs:subPropertyOf rdf:resource="&sustenagro2;has"/>
     </owl:ObjectProperty>
     
 
@@ -210,20 +218,10 @@
 
     <owl:ObjectProperty rdf:about="&sustenagro2;hasMicroRegion">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en">It has microregion</rdfs:label>
+        <rdfs:label xml:lang="en">has microregion</rdfs:label>
         <rdfs:label xml:lang="pt">Tem microregion</rdfs:label>
-        <rdfs:range rdf:resource="&sustenagro2;SimpleCategory"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://semantic.icmc.usp.br/sustenagro#hasProductionUnitType -->
-
-    <owl:ObjectProperty rdf:about="&sustenagro2;hasProductionUnitType">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en">It has production unit type</rdfs:label>
-        <rdfs:label xml:lang="pt">Tem tipo de unidade de produção</rdfs:label>
-        <rdfs:range rdf:resource="&sustenagro2;SimpleCategory"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/MicroRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&sustenagro2;has"/>
     </owl:ObjectProperty>
     
 
@@ -232,9 +230,21 @@
 
     <owl:ObjectProperty rdf:about="&sustenagro2;hasSugarcaneSource">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en">It has sugarcane source</rdfs:label>
+        <rdfs:label xml:lang="en">has sugarcane source</rdfs:label>
         <rdfs:label xml:lang="pt">Tem origem da cana</rdfs:label>
-        <rdfs:range rdf:resource="&sustenagro2;SimpleCategory"/>
+        <rdfs:range rdf:resource="&sustenagro2;SugarcaneSourceCategory"/>
+        <rdfs:subPropertyOf rdf:resource="&sustenagro2;has"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantic.icmc.usp.br/sustenagro#hasType -->
+
+    <owl:ObjectProperty rdf:about="&sustenagro2;hasType">
+        <rdfs:label xml:lang="en">has type</rdfs:label>
+        <rdfs:label xml:lang="pt">Tem tipo</rdfs:label>
+        <rdfs:range rdf:resource="&sustenagro2;ProductionUnit"/>
+        <rdfs:subPropertyOf rdf:resource="&sustenagro2;has"/>
     </owl:ObjectProperty>
     
 
@@ -296,12 +306,19 @@
     
 
 
+    <!-- http://semantic.icmc.usp.br/sustenagro#has -->
+
+    <owl:DatatypeProperty rdf:about="&sustenagro2;has"/>
+    
+
+
     <!-- http://semantic.icmc.usp.br/sustenagro#hasBeginningOfHarvestDate -->
 
     <owl:DatatypeProperty rdf:about="&sustenagro2;hasBeginningOfHarvestDate">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en">It has beginning of harvest date</rdfs:label>
+        <rdfs:label xml:lang="en">has beginning of harvest date</rdfs:label>
         <rdfs:label xml:lang="pt">Tem data de início da colheita</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&sustenagro2;has"/>
         <rdfs:range rdf:resource="&xsd;date"/>
     </owl:DatatypeProperty>
     
@@ -311,8 +328,9 @@
 
     <owl:DatatypeProperty rdf:about="&sustenagro2;hasBeginningOfPlantingDate">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en">It has beginning of planting date</rdfs:label>
+        <rdfs:label xml:lang="en">has beginning of planting date</rdfs:label>
         <rdfs:label xml:lang="pt">Tem data de início do plantio</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&sustenagro2;has"/>
         <rdfs:range rdf:resource="&xsd;date"/>
     </owl:DatatypeProperty>
     
@@ -322,8 +340,9 @@
 
     <owl:DatatypeProperty rdf:about="&sustenagro2;hasEstablishmentDate">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en">It has establishment date</rdfs:label>
+        <rdfs:label xml:lang="en">has establishment date</rdfs:label>
         <rdfs:label xml:lang="pt">Tem data de fundação</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&sustenagro2;has"/>
         <rdfs:range rdf:resource="&xsd;date"/>
     </owl:DatatypeProperty>
     
@@ -333,9 +352,10 @@
 
     <owl:DatatypeProperty rdf:about="&sustenagro2;hasFinancing">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en">It has financing</rdfs:label>
+        <rdfs:label xml:lang="en">has financing</rdfs:label>
         <rdfs:label xml:lang="pt">Tem finanzamento</rdfs:label>
-        <rdfs:range rdf:resource="&xsd;language"/>
+        <rdfs:subPropertyOf rdf:resource="&sustenagro2;has"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -344,8 +364,9 @@
 
     <owl:DatatypeProperty rdf:about="&sustenagro2;hasFinishOfHarvestDate">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en">It has finish of harvest date</rdfs:label>
+        <rdfs:label xml:lang="en">has finish of harvest date</rdfs:label>
         <rdfs:label xml:lang="pt">Tem data de término da colheita</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&sustenagro2;has"/>
         <rdfs:range rdf:resource="&xsd;date"/>
     </owl:DatatypeProperty>
     
@@ -355,8 +376,9 @@
 
     <owl:DatatypeProperty rdf:about="&sustenagro2;hasFinishOfPlantingDate">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en">It has finish of planting date</rdfs:label>
+        <rdfs:label xml:lang="en">has finish of planting date</rdfs:label>
         <rdfs:label xml:lang="pt">Tem data de término da colheita</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&sustenagro2;has"/>
         <rdfs:range rdf:resource="&xsd;date"/>
     </owl:DatatypeProperty>
     
@@ -366,9 +388,10 @@
 
     <owl:DatatypeProperty rdf:about="&sustenagro2;hasInnovationDevelopmentProjects">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en">It has innovation development projects</rdfs:label>
+        <rdfs:label xml:lang="en">has innovation development projects</rdfs:label>
         <rdfs:label xml:lang="pt">Tem projetos de innovação e/ou desenvolvimento</rdfs:label>
-        <rdfs:range rdf:resource="&xsd;language"/>
+        <rdfs:subPropertyOf rdf:resource="&sustenagro2;has"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -377,9 +400,22 @@
 
     <owl:DatatypeProperty rdf:about="&sustenagro2;hasLinkWithOtherBusinessOrInvestmentGroups">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en">It has link with other business groups or investment</rdfs:label>
+        <rdfs:label xml:lang="en">has link with other business groups or investment</rdfs:label>
         <rdfs:label xml:lang="pt">Tem ligação com outros grupos empresariais ou de investimentos</rdfs:label>
-        <rdfs:range rdf:resource="&xsd;language"/>
+        <rdfs:subPropertyOf rdf:resource="&sustenagro2;has"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semantic.icmc.usp.br/sustenagro#hasName -->
+
+    <owl:DatatypeProperty rdf:about="&sustenagro2;hasName">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has name</rdfs:label>
+        <rdfs:label xml:lang="pt">Tem nome</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&sustenagro2;has"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -388,20 +424,10 @@
 
     <owl:DatatypeProperty rdf:about="&sustenagro2;hasPartnershipsForResearchOrImprovementOfTheSystem">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en">It has partnerships for research or improvement of the system</rdfs:label>
+        <rdfs:label xml:lang="en">has partnerships for research or improvement of the system</rdfs:label>
         <rdfs:label xml:lang="pt">Tem parcerias para pesquisa ou aprimoramento do sistema</rdfs:label>
-        <rdfs:range rdf:resource="&xsd;language"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://semantic.icmc.usp.br/sustenagro#hasProductionUnitName -->
-
-    <owl:DatatypeProperty rdf:about="&sustenagro2;hasProductionUnitName">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en">It has production name</rdfs:label>
-        <rdfs:label xml:lang="pt">Tem nome da unidade produtiva</rdfs:label>
-        <rdfs:range rdf:resource="&xsd;language"/>
+        <rdfs:subPropertyOf rdf:resource="&sustenagro2;has"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -410,9 +436,10 @@
 
     <owl:DatatypeProperty rdf:about="&sustenagro2;hasTotalValueInvestedInTechnologicInAgriculturalPhase">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en">It has total value invested in technologicIn agricultural phase</rdfs:label>
+        <rdfs:label xml:lang="en">has total value invested in technologicIn agricultural phase</rdfs:label>
         <rdfs:label xml:lang="pt">Tem valor total investido em tecnologia na fase agrícola (até a fase atual)</rdfs:label>
-        <rdfs:range rdf:resource="&owl;real"/>
+        <rdfs:subPropertyOf rdf:resource="&sustenagro2;has"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </owl:DatatypeProperty>
     
 
@@ -421,9 +448,10 @@
 
     <owl:DatatypeProperty rdf:about="&sustenagro2;hasTotalValueInvestedInTechnologicInIndustrialPhase">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en">It has total value invested in technologicIn industrial phase</rdfs:label>
+        <rdfs:label xml:lang="en">has total value invested in technologicIn industrial phase</rdfs:label>
         <rdfs:label xml:lang="pt">Tem valor total investido em tecnologia na fase industrial (até a fase atual</rdfs:label>
-        <rdfs:range rdf:resource="&owl;real"/>
+        <rdfs:subPropertyOf rdf:resource="&sustenagro2;has"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </owl:DatatypeProperty>
     
 
@@ -432,9 +460,10 @@
 
     <owl:DatatypeProperty rdf:about="&sustenagro2;hasTotalValuePlaneedForInvestmentToProductionDrainage">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en">It has total value planeed for investment to production drainage</rdfs:label>
+        <rdfs:label xml:lang="en">has total value planeed for investment to production drainage</rdfs:label>
         <rdfs:label xml:lang="pt">Tem valor total previsto para investimento para escoamento da produção</rdfs:label>
-        <rdfs:range rdf:resource="&owl;real"/>
+        <rdfs:subPropertyOf rdf:resource="&sustenagro2;has"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </owl:DatatypeProperty>
     
 
@@ -442,7 +471,7 @@
     <!-- http://semantic.icmc.usp.br/sustenagro#weight -->
 
     <owl:DatatypeProperty rdf:about="&sustenagro2;weight">
-        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </owl:DatatypeProperty>
     
 
@@ -532,7 +561,7 @@
     <owl:Class rdf:about="http://dbpedia.org/ontology/Provider">
         <rdfs:label xml:lang="en">Provider</rdfs:label>
         <rdfs:label xml:lang="pt">Fornecedor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&sustenagro2;ProductionUnitType"/>
+        <rdfs:subClassOf rdf:resource="&sustenagro2;ProductionUnit"/>
     </owl:Class>
     
 
@@ -562,7 +591,7 @@
     <owl:Class rdf:about="http://dbpedia.org/resource/PhysicalPlant">
         <rdfs:label xml:lang="en">Plant</rdfs:label>
         <rdfs:label xml:lang="pt">Usina</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&sustenagro2;ProductionUnitType"/>
+        <rdfs:subClassOf rdf:resource="&sustenagro2;ProductionUnit"/>
     </owl:Class>
     
 
@@ -791,12 +820,12 @@
     
 
 
-    <!-- http://semantic.icmc.usp.br/sustenagro#AgriculturalProductionSystem -->
+    <!-- http://semantic.icmc.usp.br/sustenagro#AgriculturalProductionSystemCategory -->
 
-    <owl:Class rdf:about="&sustenagro2;AgriculturalProductionSystem">
-        <rdfs:label xml:lang="en">Agricultural production system</rdfs:label>
-        <rdfs:label xml:lang="pt">Sistema de produção agrícola</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&sustenagro2;ProductionUnitFeature"/>
+    <owl:Class rdf:about="&sustenagro2;AgriculturalProductionSystemCategory">
+        <rdfs:label xml:lang="en">Agricultural production system category</rdfs:label>
+        <rdfs:label xml:lang="pt">Categoria de sistema de produção agrícola</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&sustenagro2;Categorical"/>
     </owl:Class>
     
 
@@ -892,12 +921,12 @@
     
 
 
-    <!-- http://semantic.icmc.usp.br/sustenagro#AvailabilityOfEvaluationResults -->
+    <!-- http://semantic.icmc.usp.br/sustenagro#AvailabilityOfEvaluationResultsCategory -->
 
-    <owl:Class rdf:about="&sustenagro2;AvailabilityOfEvaluationResults">
-        <rdfs:label xml:lang="en">Availability of evaluations results</rdfs:label>
-        <rdfs:label xml:lang="pt">Disponibilização dos resultados da avaliação</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&sustenagro2;ProductionUnitFeature"/>
+    <owl:Class rdf:about="&sustenagro2;AvailabilityOfEvaluationResultsCategory">
+        <rdfs:label xml:lang="en">Availability of evaluations results category</rdfs:label>
+        <rdfs:label xml:lang="pt">Categoria da disponibilização dos resultados da avaliação</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&sustenagro2;Categorical"/>
     </owl:Class>
     
 
@@ -1059,12 +1088,12 @@
     
 
 
-    <!-- http://semantic.icmc.usp.br/sustenagro#CanavialLongevity -->
+    <!-- http://semantic.icmc.usp.br/sustenagro#CanavialLongevityCategory -->
 
-    <owl:Class rdf:about="&sustenagro2;CanavialLongevity">
-        <rdfs:label xml:lang="en">Canavial Longevity</rdfs:label>
-        <rdfs:label xml:lang="pt">Longevidade do canvial</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&sustenagro2;ProductionUnitFeature"/>
+    <owl:Class rdf:about="&sustenagro2;CanavialLongevityCategory">
+        <rdfs:label xml:lang="en">Canavial longevity category</rdfs:label>
+        <rdfs:label xml:lang="pt">Categoria de longevidade do canavial</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&sustenagro2;Categorical"/>
     </owl:Class>
     
 
@@ -1434,12 +1463,6 @@
         </rdfs:subClassOf>
         <sustenagro2:weight rdf:datatype="&xsd;double">2.0</sustenagro2:weight>
     </owl:Class>
-    
-
-
-    <!-- http://semantic.icmc.usp.br/sustenagro#Feature -->
-
-    <owl:Class rdf:about="&sustenagro2;Feature"/>
     
 
 
@@ -2017,16 +2040,6 @@
     
 
 
-    <!-- http://semantic.icmc.usp.br/sustenagro#PlantAndProvider -->
-
-    <owl:Class rdf:about="&sustenagro2;PlantAndProvider">
-        <rdfs:label xml:lang="en">Plant and provider</rdfs:label>
-        <rdfs:label xml:lang="pt">Usina e fornecedor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&sustenagro2;ProductionUnitType"/>
-    </owl:Class>
-    
-
-
     <!-- http://semantic.icmc.usp.br/sustenagro#PlantationPlanAccordingToTheRegionalFeatures -->
 
     <owl:Class rdf:about="&sustenagro2;PlantationPlanAccordingToTheRegionalFeatures">
@@ -2335,27 +2348,6 @@
         <rdfs:label xml:lang="en">Production unit</rdfs:label>
         <rdfs:label xml:lang="pt">Unidade produtiva</rdfs:label>
         <rdfs:subClassOf rdf:resource="&sustenagro2;Unity"/>
-        <sustenagro2:features rdf:resource="&sustenagro2;ProductionUnitFeature"/>
-    </owl:Class>
-    
-
-
-    <!-- http://semantic.icmc.usp.br/sustenagro#ProductionUnitFeature -->
-
-    <owl:Class rdf:about="&sustenagro2;ProductionUnitFeature">
-        <rdfs:label xml:lang="en">Production unit feature</rdfs:label>
-        <rdfs:label xml:lang="pt">Característica de unidade de produtiva</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&sustenagro2;Feature"/>
-    </owl:Class>
-    
-
-
-    <!-- http://semantic.icmc.usp.br/sustenagro#ProductionUnitType -->
-
-    <owl:Class rdf:about="&sustenagro2;ProductionUnitType">
-        <rdfs:label xml:lang="en">Production unity type</rdfs:label>
-        <rdfs:label xml:lang="pt">Tipo de unidade de produção</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&sustenagro2;ProductionUnitFeature"/>
     </owl:Class>
     
 
@@ -2773,16 +2765,6 @@
     
 
 
-    <!-- http://semantic.icmc.usp.br/sustenagro#SugarcaneProductionSystem -->
-
-    <owl:Class rdf:about="&sustenagro2;SugarcaneProductionSystem">
-        <rdfs:label xml:lang="en">Sugarcane production system</rdfs:label>
-        <rdfs:label xml:lang="pt">Sistema de produção de cana-de-açucar</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&sustenagro2;AgriculturalProductionSystem"/>
-    </owl:Class>
-    
-
-
     <!-- http://semantic.icmc.usp.br/sustenagro#SugarcaneProductivityPerHectareCategory -->
 
     <owl:Class rdf:about="&sustenagro2;SugarcaneProductivityPerHectareCategory">
@@ -2803,12 +2785,12 @@
     
 
 
-    <!-- http://semantic.icmc.usp.br/sustenagro#SugarcaneSource -->
+    <!-- http://semantic.icmc.usp.br/sustenagro#SugarcaneSourceCategory -->
 
-    <owl:Class rdf:about="&sustenagro2;SugarcaneSource">
-        <rdfs:label xml:lang="en">Sugarcane source</rdfs:label>
-        <rdfs:label xml:lang="pt">Origem da cana</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&sustenagro2;ProductionUnitFeature"/>
+    <owl:Class rdf:about="&sustenagro2;SugarcaneSourceCategory">
+        <rdfs:label xml:lang="en">Sugarcane source category</rdfs:label>
+        <rdfs:label xml:lang="pt">Categoria do origem da cana</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&sustenagro2;Categorical"/>
     </owl:Class>
     
 
@@ -2975,7 +2957,7 @@
     <!-- http://semantic.icmc.usp.br/sustenagro#Unity -->
 
     <owl:Class rdf:about="&sustenagro2;Unity">
-        <rdfs:label xml:lang="en">Unit</rdfs:label>
+        <rdfs:label xml:lang="en">Unity</rdfs:label>
         <rdfs:label xml:lang="pt">Unidade</rdfs:label>
     </owl:Class>
     
@@ -4985,7 +4967,7 @@
     <!-- http://semantic.icmc.usp.br/sustenagro#LeaseOrigin -->
 
     <owl:NamedIndividual rdf:about="&sustenagro2;LeaseOrigin">
-        <rdf:type rdf:resource="&sustenagro2;SugarcaneSource"/>
+        <rdf:type rdf:resource="&sustenagro2;SugarcaneSourceCategory"/>
         <rdfs:label xml:lang="en">Lease origin</rdfs:label>
         <rdfs:label xml:lang="pt">Origem do arrendamento</rdfs:label>
     </owl:NamedIndividual>
@@ -5338,7 +5320,7 @@
     <!-- http://semantic.icmc.usp.br/sustenagro#OneAndHalfYear -->
 
     <owl:NamedIndividual rdf:about="&sustenagro2;OneAndHalfYear">
-        <rdf:type rdf:resource="&sustenagro2;CanavialLongevity"/>
+        <rdf:type rdf:resource="&sustenagro2;CanavialLongevityCategory"/>
         <rdfs:label xml:lang="en">One and half year</rdfs:label>
         <rdfs:label xml:lang="pt">Cana de um ano e meio</rdfs:label>
     </owl:NamedIndividual>
@@ -5348,7 +5330,7 @@
     <!-- http://semantic.icmc.usp.br/sustenagro#OneYear -->
 
     <owl:NamedIndividual rdf:about="&sustenagro2;OneYear">
-        <rdf:type rdf:resource="&sustenagro2;CanavialLongevity"/>
+        <rdf:type rdf:resource="&sustenagro2;CanavialLongevityCategory"/>
         <rdfs:label xml:lang="en">One year</rdfs:label>
         <rdfs:label xml:lang="pt">Um ano</rdfs:label>
     </owl:NamedIndividual>
@@ -5369,7 +5351,7 @@
     <!-- http://semantic.icmc.usp.br/sustenagro#OwnOrigin -->
 
     <owl:NamedIndividual rdf:about="&sustenagro2;OwnOrigin">
-        <rdf:type rdf:resource="&sustenagro2;SugarcaneSource"/>
+        <rdf:type rdf:resource="&sustenagro2;SugarcaneSourceCategory"/>
         <rdfs:label xml:lang="en">Own origin</rdfs:label>
         <rdfs:label xml:lang="pt">Origem própria</rdfs:label>
     </owl:NamedIndividual>
@@ -5648,6 +5630,16 @@
     
 
 
+    <!-- http://semantic.icmc.usp.br/sustenagro#SugarcaneProductionSystem -->
+
+    <owl:NamedIndividual rdf:about="&sustenagro2;SugarcaneProductionSystem">
+        <rdf:type rdf:resource="&sustenagro2;AgriculturalProductionSystemCategory"/>
+        <rdfs:label xml:lang="en">Sugarcane production system</rdfs:label>
+        <rdfs:label xml:lang="pt">Sistema de produção de cana-de-açucar</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://semantic.icmc.usp.br/sustenagro#SugarcaneValueEqualOrHigher -->
 
     <owl:NamedIndividual rdf:about="&sustenagro2;SugarcaneValueEqualOrHigher">
@@ -5673,7 +5665,7 @@
     <!-- http://semantic.icmc.usp.br/sustenagro#SupplierOrigin -->
 
     <owl:NamedIndividual rdf:about="&sustenagro2;SupplierOrigin">
-        <rdf:type rdf:resource="&sustenagro2;SugarcaneSource"/>
+        <rdf:type rdf:resource="&sustenagro2;SugarcaneSourceCategory"/>
         <rdfs:label xml:lang="en">Supplier origin</rdfs:label>
         <rdfs:label xml:lang="pt">Origem do fornecedor</rdfs:label>
     </owl:NamedIndividual>
@@ -5986,7 +5978,7 @@
     <!-- http://semantic.icmc.usp.br/sustenagro#private -->
 
     <owl:NamedIndividual rdf:about="&sustenagro2;private">
-        <rdf:type rdf:resource="&sustenagro2;AvailabilityOfEvaluationResults"/>
+        <rdf:type rdf:resource="&sustenagro2;AvailabilityOfEvaluationResultsCategory"/>
         <rdfs:label xml:lang="en">Private</rdfs:label>
         <rdfs:label xml:lang="pt">Privado</rdfs:label>
     </owl:NamedIndividual>
@@ -6007,7 +5999,7 @@
     <!-- http://semantic.icmc.usp.br/sustenagro#public -->
 
     <owl:NamedIndividual rdf:about="&sustenagro2;public">
-        <rdf:type rdf:resource="&sustenagro2;AvailabilityOfEvaluationResults"/>
+        <rdf:type rdf:resource="&sustenagro2;AvailabilityOfEvaluationResultsCategory"/>
         <rdfs:label xml:lang="en">Public</rdfs:label>
         <rdfs:label xml:lang="pt">Público</rdfs:label>
     </owl:NamedIndividual>
