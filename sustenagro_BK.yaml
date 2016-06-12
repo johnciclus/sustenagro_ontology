@@ -54,19 +54,19 @@ relevance:
 
 hasSugarcaneSource:
   subPropertyOf: ObjectProperty
-  label: [sugarcane source @en, origem da cana @pt]
-  #functional: true
+  label: [has sugarcane source @en, tem origem da cana @pt]
+  functional: true
   range: SugarcaneSourceCategory
 
 hasAvailabilityOfEvaluationResults:
   subPropertyOf: ObjectProperty
-  label: [availability of evaluations results @en, disponibilização dos resultados da avaliação @pt]
+  label: [has availability of evaluations results @en, tem disponibilização dos resultados da avaliação @pt]
   functional: true
   range: AvailabilityOfEvaluationResultsCategory
 
 hasAgriculturalProductionSystem:
   subPropertyOf: ObjectProperty
-  label: [agricultural production system @en, sistema de produção agrícola @pt]
+  label: [has agricultural production system @en, tem sistema de produção agrícola @pt]
   functional: true
   range: AgriculturalProductionSystemCategory
 
@@ -195,18 +195,6 @@ SustainabilityCategory:
     - Sustainability category @en
     - Categoría de sustentabilidade @pt
 
-ProductionEnvironmentAlignmentCategory:
-  is_a: Categorical
-  label:
-    - Production environment alignment @en
-    - Alinhamento ao ambiente de produção/produtor @pt
-
-SugarcaneProcessingOptimizationCategory:
-  is_a: Categorical
-  label:
-    - Sugarcane processing optimization @en
-    - Otimização do processamento da cana-de-açucar @pt
-
 # Constantes
 
 ExistNo:
@@ -271,35 +259,6 @@ Public:
   type: AvailabilityOfEvaluationResultsCategory
   label: [Public @en, Público @pt]
 
-IndirectOptimization:
-  type:  SugarcaneProcessingOptimizationCategory
-  label: [Indireta @pt, Indirect @en]
-  asNumber: 1.0
-
-NullOptimization:
-  type:  SugarcaneProcessingOptimizationCategory
-  label: [Nula @pt, Null @en]
-  asNumber: 0.0
-
-DirectOptimization:
-  type:  SugarcaneProcessingOptimizationCategory
-  label: [Direct @en, Direta @pt]
-  asNumber: 2.0
-
-IndirectAlignment:
-  type:  ProductionEnvironmentAlignmentCategory
-  label: [Indireta @pt, Indirect @en]
-  asNumber: 1.0
-
-NullAlignment:
-  type:  ProductionEnvironmentAlignmentCategory
-  label: [Nula @pt, Null @en]
-  asNumber: 0.0
-
-DirectAlignment:
-  type:  ProductionEnvironmentAlignmentCategory
-  label: [Direct @en, Direta @pt]
-  asNumber: 2.0
 
 ProductionUnit:
   is_a: EvaluationObject
@@ -307,10 +266,10 @@ ProductionUnit:
   hasName: Literal
   harvestYear: Literal
   hasAgriculturalProductionSystem: AgriculturalProductionSystemCategory
+  hasSugarcaneSource: SugarcaneSourceCategory
   state: State
   hasMicroregion: Microregion
   hasAvailabilityOfEvaluationResults: AvailabilityOfEvaluationResultsCategory
-  #hasSugarcaneSource: SugarcaneSourceCategory
 
 PhysicalPlant:
   is_a: ProductionUnit
@@ -334,8 +293,6 @@ Variable:
   is_a: Feature
   label: [Variável @pt, Variable @en]
 
-
-
 # Descendentes de Indicator
 
 SustainabilityIndicator:
@@ -343,7 +300,6 @@ SustainabilityIndicator:
   label:
     - Sustainability Indicator @en
     - Indicador de sustentabilidade @pt
-
 
 # Descendentes de Variable
 
@@ -358,7 +314,13 @@ TechnologicalEfficiencyFeature:
   label:
     - Technological efficiency @en
     - Eficiência tecnológica @pt
-
+  hasWeight:
+    - label: [Indireta @pt, Indirect @en]
+      asNumber: 1.0
+    - label: [Nula @pt, Null @en]
+      asNumber: 0.0
+    - label: [Direct @en, Direta @pt]
+      asNumber: 2.0
 
 # Descendentes de ProductionEfficiencyFeature
 
@@ -370,9 +332,7 @@ SugarcaneQuality:
 
 SugarcaneValueInATR:
   is_a: SugarcaneQuality
-  label:
-    - Sugarcane value in ATR/Hectare (Consider the productivity and quality of sugarcane) @en
-    - Valor da cana em ATR/hectare (considera a produtividade e qualidade da cana) @pt
+  label: [Sugarcane value in ATR/Hectare (Consider the productivity and quality of sugarcane) @en, Valor da cana em ATR/hectare (considera a produtividade e qualidade da cana) @pt]
   value:
     - label: [Lowest @en, Menor @pt]
       asNumber: -1.0
@@ -395,7 +355,7 @@ PlanningOfHarvestFront:
       asNumber: 0.0
     - label:
       - Appropriate @en
-      - Adequado @pt
+      - Apropriado @pt
       asNumber: 1.0
     - label:
       - Enhanced @en
@@ -425,22 +385,11 @@ MarketVariable:
     - Variável de mercado @pt
     - Market variable @en
 
-#AccessToInternalMarket:
-#  is_a: MarketVariable
-#  label:
-#    - Access to the internal market (Etanol) @en
-#    - Acesso ao mercado interno (Etanol) @pt
-#  value:
-#    - label: [No @en, Não @pt]
-#      asNumber: 0.0
-#    - label: [Yes @en, Sim @pt]
-#      asNumber: 1.0
-
-DomesticDemand:
+AccessToInternalMarket:
   is_a: MarketVariable
   label:
-    - Domestic demand has increased over the previous year @en
-    - Demanda doméstica aumentou em relação ao ano anterior @pt
+    - Access to the internal market (Etanol) @en
+    - Acesso ao mercado interno (Etanol) @pt
   value:
     - label: [No @en, Não @pt]
       asNumber: 0.0
@@ -458,45 +407,32 @@ AccessToInternationalMarket:
     - label: [Yes @en, Sim @pt]
       asNumber: 2.0
 
-
-PositiveGenerationOfFormalEmployment:
+LocalIncomeGeneration:
   is_a: MarketVariable
   label:
-    - Positive generation of formal employment (From the previous period) @en
-    - Geração positiva de emprego formal (em relação ao período anterior) @pt
+    - Geração de renda local @pt
+    - Local income generation @en
   value:
-    - label: [No @en, Não @pt]
-      asNumber: 0.0
     - label: [Yes @en, Sim @pt]
       asNumber: 2.0
-
-
-#LocalIncomeGeneration:
-#  is_a: MarketVariable
-#  label:
-#    - Geração de renda local @pt
-#    - Local income generation @en
-#  value:
-#    - label: [Yes @en, Sim @pt]
-#      asNumber: 2.0
-#    - label: [No @en, Não @pt]
-#      asNumber: 0.0
+    - label: [No @en, Não @pt]
+      asNumber: 0.0
 
 LocalIncomeGeneration:
   is_a: MarketVariable
   label:
-    - Aumento no PIB do município onde está localizada a usina. @pt
-    - Increase in the municipality of GDP where is located the plant. @en
+    - Geração de renda local @pt
+    - Local income generation @en
   value:
     - label: [Yes @en, Sim @pt]
-      asNumber: 1.0
+      asNumber: 2.0
     - label: [No @en, Não @pt]
       asNumber: 0.0
 
 PriceQuaranteePolicyAndProductionInTheField :
   is_a: MarketVariable
   label:
-    - Políticas de garantia de safra e de produção no campo (financiamento da safra agrícola) @pt
+    - Políticas de garantia de preço e de produção no campo (financiamento da safra agrícola) @pt
     - Price guarantee policy and production in the field (financing the harvest) @en
   value:
     - label: [Yes @en, Sim @pt]
@@ -524,7 +460,7 @@ ComplianceToStateEnvironmentalProtocols:
 ComplianceWithNationalCommitmentToAdequacyToGoodWorkingConditions:
   is_a: PoliticalVariable
   label:
-    - Atendimento ao compromisso nacional para Aperfeiçoar as Condições de trabalho na Cana-de-açúcar @pt
+    - Atendimento ao compromisso nacional para adequação às boas condições de trabalho @pt
     - Compliance with the national commitment to good working conditions @en
   value:
     - label: [Yes @en, Sim @pt]
@@ -575,16 +511,28 @@ PublicPoliciesForSector:
 
 AdherenceToAgricultureProgramLowCarbon:
   is_a: PoliticalVariable
-  label: ["Adesão ao Programa de Agricultura de Baixo Carbono (pelo menos um dos programas) @pt", "Adherence to agriculture program low carbon @en"]
+  label: ["Adesão ao Programa de Agricultura de Baixo Carbono • Programa 1: Recuperação de Pastagens Degradadas; • Programa 2: Integração Lavoura-Pecuária-Floresta (iLPF) e Sistemas Agroflorestais (SAFs); • Programa 3: Sistema Plantio Direto (SPD); • Programa 4: Fixação Biológica de Nitrogênio (FBN); • Programa 5: Florestas Plantadas (matas ciliares e recuperação de APP’s); • Programa 6: Tratamento de Dejetos Animais (resíduos da produção); • Programa 7: Adaptação às Mudanças Climáticas. @pt", "Adherence to agriculture program low carbon @en"]
   value:
     - label:
-      - Accession @en
-      - Adesão @pt
+      - Em substituição a áreas degradadas @pt
+      - Replacing degraded areas @en
+      asNumber: 3.0
+    - label:
+      - Replacing areas of native forests @en
+      - Em substituição a áreas de matas nativas @pt
+      asNumber: -2.0
+    - label:
+      - Replacing pasture @en
+      - Em substituição a pasto @pt
       asNumber: 2.0
     - label:
-      - No @en
-      - Não @pt
-      asNumber: 0.0
+      - Replacing sugarcane and similar cultures @en
+      - Em substituição a cana-de-açucar e culturas similares @pt
+      asNumber: 1.0
+    - label:
+      - Em substituição a culturas alimentares @pt
+      - Replacing food crops @en
+      asNumber: -1.0
 
 ProductionVariable:
   is_a: ProductionEfficiencyFeature
@@ -609,11 +557,9 @@ UseOfMoreEfficientInputs:
     - Use of more efficient inputs @en
     - Uso de insumos mais eficientes @pt
   value:
-    - label: [Use agriculture of precision @en, Usa agricultura de precisão @pt]
+    - label: [Yes @en, Sim @pt]
       asNumber: 2.0
-    - label: [Follow good practice guide agricultural @en, Segue manual de boas práticas agrícolas @pt]
-      asNumber: 1.0
-    - label: [No use @en, Não usa @pt]
+    - label: [No @en, Não @pt]
       asNumber: 0.0
 
 
@@ -624,14 +570,12 @@ TechnologicalEfficiencyInTheField:
   label:
     - Technological efficiency in the field @en
     - Eficiência tecnológica no campo @pt
-  hasWeight: ProductionEnvironmentAlignmentCategory
 
 TechnologicalEfficiencyInTheIndustrial:
   is_a: TechnologicalEfficiencyFeature
   label:
     - Technological efficiency in the industry @en
-    - Eficiência tecnológica na industria @pt
-  hasWeight: SugarcaneProcessingOptimizationCategory
+    - Eficiência tecnológica na industrial @pt
 
 # Descendentes de TechnologicalEfficiencyInTheField
 
@@ -642,7 +586,7 @@ SugarcanePlanting:
     - Sugarcane planting @en
   value:
     - label: [Uncontrolled seedling @en, Muda não controlada @pt]
-      asNumber: -1.0
+      asNumber: 0.0
     - label: [With healthy seedling @en, Com muda sadia @pt]
       asNumber: 1.0
     - label: [Muda Pré-brotada (MPB) @pt, Pre-budded seedling @en]
@@ -688,7 +632,7 @@ PriceEqualizationPolicy:
   is_a: TechnologicalEfficiencyInTheField
   label:
     - Stable price policy (tanking - price guarantee - warrant) @en
-    - 'Política de estabilidade preços (tancagem, garantia de preço, warrant) @pt'
+    - Política de estabilidade preços (tancagem - garantia de preço - warrant) @pt
   value:
     - label:
       - Favorável (com estoques) @pt
@@ -861,7 +805,7 @@ BagasseAndStrawDestination:
   is_a: TechnologicalEfficiencyInTheIndustrial
   label:
     - Bagasse and straw destination for 2nd generation ethanol production @en
-    - "Destinação mais sustentável do bagaço e palha (Por ex. produção de etanol de 2ª geração, produção de energia, etc) @pt"
+    - Destinação do bagaço e palha para produção de etanol de 2nd geração @pt
   value:
     - label: [Yes @en, Sim @pt]
       asNumber: 1.0
@@ -888,11 +832,11 @@ RawMaterialDiversificationWithImprovedInputs:
   is_a: TechnologicalEfficiencyInTheIndustrial
   label:
     - Diversificação da matéria prima com insumos melhorados @pt
-    - Raw material diversification @en
+    - Raw material diversification with improved inputs @en
   value:
     - label:
       - Use of sugarcane / biomass @en
-      - Uso de cana energia / biomassa/ sorgo @pt
+      - Uso de cana energia / biomassa @pt
       asNumber: 1.0
     - label:
       - Uso de cana convencional @pt
@@ -1112,7 +1056,7 @@ HarvestAttribute:
 HarvestTypeUsed:
   is_a: HarvestAttribute
   label:
-    - Tipo de colheita utilizada (manual ou mecanizada) @pt
+    - Tipo de colheta utilizada (manual ou mecanizada) @pt
     - Harvest type used (manual or mechanized) @en
   relevance: 2.0
   value:
@@ -1129,11 +1073,7 @@ UseOfBurningInAreasWithHigherSlopeOf12:
     - Use of burning in areas with slope higher than 12% @en
     - Uso de queima em áreas com declive acima de 12% @pt
   relevance: 2.0
-  value:
-    - label: [Yes @en, Sim @pt]
-      asNumber: 0.0
-    - label: [No @en, Não @pt]
-      asNumber: 1.0
+  value: YesNo
 
 UseOfBurningInAreasWithLowerSlopeOf12:
   is_a: HarvestAttribute
@@ -1141,11 +1081,7 @@ UseOfBurningInAreasWithLowerSlopeOf12:
     - Uso de queima em áreas com declive inferior a 12% @pt
     - Use of burning in areas with lower slope of 12% @en
   relevance: 2.0
-  value:
-    - label: [Yes @en, Sim @pt]
-      asNumber: -1.0
-    - label: [No @en, Não @pt]
-      asNumber: 1.0
+  value: YesNo
 
 TrafficControl:
   is_a: HarvestAttribute
@@ -1283,8 +1219,8 @@ AdequateStructureForInstallationOrExpansionOfWaterReuse:
 ItOwnOrGrantsForWaterCatchmentAccordingToCurrentRegulations:
   is_a: WaterAttribute
   label:
-    - It own grants for water catchment according to current regulations @en
-    - Possui outorga para captação de água segundo a norma vigente @pt
+    - It own or grants for water catchment according to current regulations @en
+    - Possui ou outorga para captação de água segundo a norma vigente @pt
   relevance: 2.0
   value: YesNo
 
@@ -1461,11 +1397,7 @@ BiofuelInfrastructureAvailable:
     - Infrastructure available for the production of second and third generation biofuels @en
     - Infraestrutura disponível para produção de biocombustíveis de segunda e terceira geração @pt
   relevance: 2.0
-  value:
-    - label: [Yes @en, Sim @pt]
-      asNumber: 1.0
-    - label: [No @en, Não @pt]
-      asNumber: -1.0
+  value: YesNo
 
 UsesOrInvestestInMoreResistantYeast:
   is_a: IndustrialUnityAttribute
@@ -1700,6 +1632,5 @@ InvestmentsInNewTechnologiesAndIndustrialProcessesWhichContributeACleanerAndSust
     - Investimentos em novas tecnologias e processos industriais que favoreçam uma produção mais limpa e sustentável @pt
   relevance: 2.0
   value: YesNo
-
 
 
